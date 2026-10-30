@@ -8,6 +8,7 @@ The goal was to make it so the ls command showed long format by default and make
 
 - ls.c: ls checks for flags like -l or -C first, and only uses a default if you typed none. I changed that default on line 2316 to long format, so plain ls now shows the long listing, but ls -C still shows columns.
 - whoami.c: geteuid gets your user ID number, and getpwuid turns that number into your username. I changed line 86 so it prints “You are: “ before the username.
+- Unified git diff patch: The exact changes are in the ls.patch and whoami.patch files in this repo.
 
 # Pros & Cons of Solution:
 
