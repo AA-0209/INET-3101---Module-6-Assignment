@@ -1,0 +1,11 @@
+--- build/coreutils-9.7/src/ls.c.orig	2026-10-30 10:51:38
++++ build/coreutils-9.7/src/ls.c	2026-10-30 10:58:40
+@@ -2313,7 +2313,7 @@
+ 
+   format = (0 <= format_opt ? format_opt
+             : ls_mode == LS_LS ? (stdout_isatty ()
+-                                  ? many_per_line : one_per_line)
++                                  ? long_format : long_format)
+             : ls_mode == LS_MULTI_COL ? many_per_line
+             : /* ls_mode == LS_LONG_FORMAT */ long_format);
+ 

@@ -1,0 +1,10 @@
+--- build/coreutils-9.7/src/whoami.c.orig	2026-10-30 10:51:46
++++ build/coreutils-9.7/src/whoami.c	2026-10-30 10:59:49
+@@ -83,6 +83,6 @@
+   if (!pw)
+     error (EXIT_FAILURE, errno, _("cannot find name for user ID %ju"),
+            (uintmax_t) uid);
+-  puts (pw->pw_name);
++  printf ("You are: %s\n", pw->pw_name);
+   return EXIT_SUCCESS;
+ }
